@@ -1,10 +1,81 @@
-/* common tags styles */
+@charset "iso-8859-1";
+
+/* based on http://webhost.bridgew.edu/etribou/layouts/skidoo_too/index.html
+ */
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+
+
+/* layout */
+
+html[xmlns] .mozclear {
+ border-bottom: 1px solid;
+ border-color: transparent;
+ margin-bottom: -1px;
+}
+
+#pageWrapper {
+ min-width: 40em;
+ width: auto;
+}
+
+#outerColumnContainer {
+ border-left: solid 14em #fff;
+ border-right: solid 14em #fff;
+}
+
+#innerColumnContainer {
+ border: solid 1px #fff;
+ border-width: 0 1px;
+ margin: 0 -1px;
+ width: 100%;
+ z-index: 1;
+}
+
+#leftColumn, #middleColumn, #rightColumn, * html #SOWrap {
+ overflow: visible;
+ position: relative;
+}
+
+#SOWrap {
+ float: left;
+ margin: 0 -1px 0 0;
+ width: 100%;
+ z-index: 3;
+}
+
+#middleColumn {
+ float: right;
+ margin: 0 0 0 -1px;
+ width: 100%;
+ z-index: 5;
+}
+
+#leftColumn {
+ float: left;
+ margin: 0 1px 0 -14em;
+ width: 14em;
+ z-index: 4;
+}
+
+#rightColumn {
+ float: right;
+ width: 14em;
+ margin: 0 -14em 0 1px;
+ z-index: 2;
+}
+
+
+/* general layout stuff */
 
 body {
  background: #fff;
  color: #000;
- margin: 0;
- font-size: 9px;
+ font-size: 100%;
 }
 
 body, .button, .tbox, .helpbox {
@@ -21,8 +92,18 @@ img {
  border: 0;
 }
 
+h1 {
+ margin: 14px 0;
+ font-size: 160%;
+ padding: 0;
+}
+
 .smalltext, div.indent {
- font-size: 9px;
+ font-size: 100%;
+}
+
+#pageWrapper {
+ font-size: 80%;
 }
 
 
@@ -31,12 +112,9 @@ img {
 #header {
  background: #000;
  width: 100%;
- border: 0;
- margin: 0;
- padding: 0;
 }
 
-#logo {
+#cool_cavemen_logo {
  vertical-align: top;
 }
 
@@ -46,57 +124,6 @@ img {
  right: 10px;
 }
 
-#main {
-
-
-border-left-color: #999;   /* left column colour */
-border-left-style: solid;
-
-border-right-color: #999;  /* right column colour */
-border-right-style: solid;
-  background-color: #fff; /* center column colour */
-width: auto;
-  /*/*/ border-left-width: 180px ;  /* left column width. NN4 hack to hide borders */
- /*/*/ border-right-width: 180px; /* right column width. NN4 hack to hide borders */
-
-
-/* padding: 0;
- padding-top: 20px;
- background-image : url(images/leopardfur.png);
- background-position: right;
- background-repeat: repeat-y;
- float: right;
- width: 100%*/
-}
-
-#inner{margin:0; width:100%;}
-
-/*#content-test{
- float: left;
- width: 100%;
- position: relative;
- margin: 0 -8px 0 -2px;
-}*/
-
-#left_sidebar{
- width:180px;
- float:left;
- position:relative;
- margin-left:-180px;
- margin-right:1px;
-
-}
-#right_sidebar{
-
- width:180px;
- float:right;
-position:relative;
-  margin-right:-180px;
- margin-left:1px;
-}
-
-
-
 .left, div[style="text-align:left"] {
  float: left;
 }
@@ -105,97 +132,182 @@ position:relative;
  float: right;
 }
 
-div.clearall {
+.clearall {
  clear: both;
 }
+
+.hide {
+ display: none;
+}
+
+.code, code {
+ font-family: "Courier New", Courier, monospace;
+}
+
 
 
 /* tabs styles */
 
 #tabnav {
- background-color: #666;
- padding: 0;
- margin: 0;
+ background: #bbb url(images/shadow.png) repeat-x scroll top;
  float: left;
  width: 100%;
- border: 0;
- border-top: 2px solid #fff;
- font-size: 11px;
+ margin: 0;
  font-weight: bold;
+ border-top: 2px solid #fff;
+ border-bottom: 2px solid #333;
+ font-size: 70%;
 }
 
 #tabnav li {
  display: inline;
 }
 
-#tabnav li a {
- color: #999;
+#tabnav li a, #tabnav li a:hover {
  border-color: #333;
  border-style: none dotted none none;
- border-width: 0 1px 1px 0;
+ border-width: 0 1px 0 0;
+}
+
+#tabnav li a {
+ color: #333;
  padding: 5px 10px;
  text-decoration: none;
  float: left;
 }
 
 #tabnav li a:hover {
- color: #fff;
- border-color: #333;
- background-color: #333;
- border-style: none dotted none none;
- border-width: 0 1px 1px 0;
+ background: #ddd url(images/hard-shadow.png) repeat-x scroll top;
+ color: #000;
 }
+
+
+
+/* quote style*/
+
+#quote {
+ z-index: 1;
+ font: italic bold cursive;
+ text-align: justify;
+ line-height: 1.5em;
+ margin: 12px;
+ position: relative;
+}
+
+#quote > p.author {
+ font: italic normal cursive;
+ text-align: right;
+}
+
+#quote > span {
+ color: #ddd;
+ position: absolute;
+ line-height: 0.6em;
+}
+
+#quote .start {
+ z-index: -1;
+ top: 0;
+ left: 0;
+}
+
+#quote .stop {
+ z-index: -1;
+ bottom: 0;
+ right: 0;
+}
+
+
+
+/* left and right column style */
+
+#rightColumn .inside, #leftColumn .inside {
+ font-size: 90%;
+}
+
+#rightColumn .inside, #leftColumn .inside {
+ color: #666;
+}
+
+#rightColumn .inside h1, #leftColumn .inside h1 {
+ background-color: #ccc;
+ font-size: 100%;
+ text-align: center;
+ padding: 3px;
+}
+
+#rightColumn .inside a:link, #leftColumn .inside a:link {
+ color: #39f;
+}
+
+#rightColumn .inside a:visited, #leftColumn .inside a:visited {
+ color: #c0c;
+}
+
+
+
+/* left column styles */
+
+#innerColumnContainer {
+ border-color: #999;
+}
+
+#outerColumnContainer {
+ border-left-color: #eee;
+}
+
+
+
+/* right column styles */
+/*
+#outerColumnContainer {
+ border-color: #eee;
+}
+
+#outerColumnContainer {
+ border-right-color: #999;
+}*/
+
 
 
 /* content styles */
 
-#content {
- font-size: 12px;
- padding: 10px;
+#middleColumn .box-border {
+ margin-bottom: 30px;
 }
 
-#content .box-border {
- background: #fff;
- border: 2px solid #ddd;
- margin-bottom: 20px;
- -moz-border-radius: 14px;
-}
-
-#content .box-caption {
- /*background: #000 url(images/leopardfur.png) no-repeat scroll top;*/
- color: #000;
- /*background: #ddd;*/
- border-bottom: 2px dotted #ddd;
- padding: 3px 5px;
- margin: 0;
- font-size: 12px;
+#middleColumn h1 {
+ color: #ff7d00;
+ font-style: italic;
  font-weight: bold;
+ padding: 10px;
+ border-width: 1px 0;
+ border-style: dashed;
+ border-color: #999;
 }
 
-#content .box-caption > .details, #content .box-caption > .details > a {
- font-size: 10px;
- color: #999;
- font-weight: normal;
-}
-
-#content .box-caption a:hover {
- color: #333;
-}
-
-#content .box-body {
+#middleColumn .box-body {
  padding: 10px;
  text-align: justify;
 }
 
-#content .box-body [style="text-align:left"] {
+#middleColumn .box-body > .details, #middleColumn .box-body > .details > a {
+ color: #999;
+}
+
+#middleColumn .box-body > .details > a:hover {
+ color: #333;
+}
+
+#middleColumn .box-body [style="text-align:left"] {
  margin: 10px 10px 10px 0;
 }
 
-#content .box-body [style="text-align:right"] {
+#middleColumn .box-body [style="text-align:right"] {
  margin: 10px 0 10px 10px;
 }
 
-#content .indent {
+#middleColumn .indent {
  /* blockote e107 tags */
  background: #eee;
  color: #000;
@@ -215,73 +327,6 @@ div.clearall {
 }*/
 
 
-/* sidebar styles */
-
-.sidebar {
- font-size: 10px;
-}
-
-/*#sidebar #boxed {
- border: 1px solid #999;
- background-color: #eee;
- -moz-border-radius: 10px;
-}*/
-
-.sidebar > div {
- padding: 6px 0;
-}
-
-.sidebar .box-border {
- margin-bottom: 10px;
-}
-
-.sidebar .box-caption {
- background: #666;
- font-weight: bold;
- padding: 2px 6px;
-}
-
-.sidebar .box-body {
- padding: 6px;
-}
-
-
-/* quote style*/
-
-#quote {
- z-index: 1;
- font: italic bold 12px cursive;
- text-align: justify;
- line-height: 1.5em;
- margin: 2px;
- padding: 12px; /* 2px = 12px - moz-border-radius*/
- position: relative;
-}
-
-#quote > p.author {
- font: italic normal 9px cursive;
- text-align: right;
-}
-
-#quote > span {
- font-size: 54px;
- color: #ddd;
- position: absolute;
- line-height: 0.6em;
-}
-
-#quote .start {
- z-index: -1;
- top: 0;
- left: 0;
-}
-
-#quote .stop {
- z-index: -1;
- bottom: 0;
- right: 0;
-}
-
 
 /* footer styles */
 
@@ -289,11 +334,12 @@ div.clearall {
  clear: both;
  text-align: center;
  background: #ccc url(images/shadow.png) repeat-x scroll top;
- border-top: 1px solid #666;
+ border-top: 2px solid #999;
  padding: 5px;
+ z-index: 3;
 }
 
-#footer .box-caption {
+#footer h1 {
  border-bottom: #666 1px dotted;
  padding-left: 5px;
  margin-bottom: 5px;
@@ -312,19 +358,18 @@ div.clearall {
 }
 
 
+
 /* form element styles */
 
 .tbox, .button {
  background-color: #fff;
  background-repeat: repeat-x;
  border: 1px solid #666;
- font-size: 10px;
 }
 
 .helpbox {
  background-color: transparent;
  border: 0;
- font-size: 9px;
 }
 
 .tbox, .button, .helpbox {
@@ -337,14 +382,11 @@ div.clearall {
  padding: 1px;
 }
 
-.button, select.tbox {
- padding: 0;
-}
-
 .button {
  background-image: url(images/button.png);
  background-position: bottom;
 }
+
 
 
 /* forum styles */
