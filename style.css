@@ -29,28 +29,26 @@ img {
 /* general layout stuff */
 
 #header {
+ display: table;
  background: #000;
  width: 100%;
  border: 0;
  margin: 0;
  padding: 0;
- margin-bottom: 20px;
+ padding-bottom: 10px;
 }
 
 #logo {
  text-align: left;
 }
 
-#container {
- width: 760px;
+#main {
  padding: 0;
- margin: 0;
- margin-left: auto;
- margin-right: auto;
-}
-
-#content, #sidebar, #footer {
- padding: 5px;
+ background-image : url(images/leopardfur.png);
+ background-position: right;
+ background-repeat: repeat-y;
+ float: right;
+ width: 100%
 }
 
 .left, div[style="text-align:left"] {
@@ -61,7 +59,7 @@ img {
  float: right;
 }
 
-div.spacer {
+div.clearall {
  clear: both;
 }
 
@@ -69,57 +67,77 @@ div.spacer {
 /* tabs styles */
 
 #tabnav {
+ padding: 0;
  margin: 0;
- padding: 0 0 30px 30px;
- border-top: 1px solid #fff;
- background: #000;
+ background-color: #000;
+ color: #000;
+ float: left;
+ width: 100%;
+ border: 0;
+ border-top: 2px solid #fff;
 }
 
 #tabnav li {
- margin: 0;
- padding: 0;
  display: inline;
- list-style-type: none;
 }
 
-#tabnav a {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-#tabnav a:link, #tabnav a:visited {
- float: left;
- font-size: 11px;
+#tabnav li a {
+ background-color: #000;
+ padding: 5px 10px;
  font-weight: bold;
  text-decoration: none;
- color: #999;
- margin-top: 6px;
+ font-size: 11px;
+ float: left;
+ color: #666;
+ border-color: #666;
+ border-style: none dotted solid none;
+ border-width: 0 1px 1px 0;
 }
 
-#tabnav li.active a:link, #tabnav li.active a:visited, #tabnav a:hover {
- border-top: 3px solid #fff;
- padding-top: 3px;
- margin-top: 0;
-}
-
-#tabnav a:hover {
+#tabnav li a:hover {
+ background-color: #333;
  color: #fff;
+ border-color: #666;
+ border-style: none dotted solid none;
+ border-width: 0 1px 1px 0;
 }
 
 
 /* content styles */
 
 #content {
- margin-right: 200px;
  font-size: 12px;
+ margin: 0 210px 0 auto; /* right margin = sidebar width + sidebar padding */
+ padding-top: 30px;
+ padding-right: 5%;
+ padding-left: 5%;
+ padding-bottom: 30px;
 }
 
 #content .box-border {
  margin-bottom: 50px;
 }
 
+#content .box-caption {
+ font-weight: bold;
+ /*background: #000 url(images/leopardfur.png) no-repeat scroll top;*/
+ background: #ccc;
+ border: 1px solid #999;
+ padding: 3px 5px;
+ margin: 0;
+ -moz-border-radius: 14px;
+}
+
+#content .box-caption > h1 {
+ color: #000;
+ font-size: 12px;
+ padding: 0;
+ margin: 0;
+}
+
 #content .box-body {
  padding: 10px;
+ text-align: justify;
 }
 
 #content .box-body [style="text-align:left"] {
@@ -130,7 +148,7 @@ div.spacer {
  margin: 10px 0 10px 10px;
 }
 
-#content .box-body .indent {
+#content .indent {
  /* blockote e107 tags */
  background: #eee;
  color: #000;
@@ -169,18 +187,71 @@ div.spacer {
 /* sidebar styles */
 
 #sidebar {
- float: right;
- width: 170px;
  font-size: 10px;
+ float: right;
+ width: 190px;
+ padding: 20px 20px 0 0;
 }
 
 #sidebar #boxed {
- border: 1px dotted #999;
+ border: 1px solid #999;
  background-color: #eee;
+ -moz-border-radius: 10px;
 }
 
 #sidebar > div {
+ padding: 6px 0;
+}
+
+#sidebar .box-border {
+ margin-bottom: 10px;
+}
+
+#sidebar .box-caption {
+ background: #999;
+ font-weight: bold;
+ padding: 2px 6px;
+}
+
+#sidebar .box-body {
  padding: 6px;
+}
+
+
+/* quote style*/
+
+#quote {
+ z-index: 1;
+ font: italic bold 12px cursive;
+ text-align: justify;
+ line-height: 1.5em;
+ margin: 2px;
+ padding: 12px; /* 2px = 12px - moz-border-radius*/
+ position: relative;
+}
+
+#quote > p.author {
+ font: italic normal 9px cursive;
+ text-align: right;
+}
+
+#quote > span {
+ font-size: 54px;
+ color: #ddd;
+ position: absolute;
+ line-height: 0.6em;
+}
+
+#quote .start {
+ z-index: -1;
+ top: 0;
+ left: 0;
+}
+
+#quote .stop {
+ z-index: -1;
+ bottom: 0;
+ right: 0;
 }
 
 
@@ -191,6 +262,13 @@ div.spacer {
  text-align: center;
  background: #ccc url(images/shadow.png) repeat-x scroll top;
  border-top: 1px solid #666;
+ padding: 5px;
+}
+
+#footer .box-caption {
+ border-bottom: #666 1px dotted;
+ padding-left: 5px;
+ margin-bottom: 5px;
 }
 
 #footer .left {
@@ -203,42 +281,6 @@ div.spacer {
 
 #footer, #footer a {
  color: #666;
-}
-
-
-/* box styles */
-
-.box-border {
- margin-bottom: 10px;
-}
-
-.box-caption {
- padding-left: 5px;
- margin-bottom: 5px;
-}
-
-#content .box-caption {
- font-weight: bold;
- background: #000 url(images/leopardfur.png) no-repeat scroll top;
- border: 1px solid #333;
- padding: 3px 5px;
- margin: 0;
- color: #fff;
-}
-
-#content .box-caption > h1 {
- color: #fff;
- font-size: 12px;
- padding: 0;
- margin: 0;
-}
-
-#sidebar .box-caption {
- border-bottom: #000 1px solid;
-}
-
-#footer .box-caption {
- border-bottom: #666 1px dotted;
 }
 
 
