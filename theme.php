@@ -13,77 +13,105 @@
 */
 
 // [theme]
-$themename = "UltimateBand";
+$themename = "Cool Cavemen";
 $themeversion = "1.0";
 $themeauthor = "Kevin Deldycke";
-$themedate = "11/11/2004";
-$themeinfo = "This theme, originally designed for the Funky Storm website (www.funky-storm.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@funky-storm.com)";
-
+$themedate = "21/11/2004";
+$themeinfo = "This theme, originally designed for the Cool Cavemen band website (www.funky-storm.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@funky-storm.com)";
 
 // [layout]
 $layout = "_default";
 
+$logo = THEME."images/laser.png";
 
 $HEADER = "
+  <div id=\"header\">
+   <div id=\"logo\"><img src=\"".$logo."\" alt=\"The Ultimate Band\"/></div>
+   <ul id=\"tabnav\">
+    {SITELINKS=flat}
+   </ul>
+  </div>
+
   <div id=\"container\">
-
-   <div id=\"header\">
-    <img src=\"".THEME."images/laser.png\" alt=\"The Ultimate Band\"/>
-   </div>
-
    <div id=\"sidebar\">
-    <div class=\"box-border\">
-     <div class=\"box-caption\">Menu</div>
-     <div class=\"box-body\">{SITELINKS=flat}</div>
+    <div id=\"boxed\">
+     {MENU=2}
     </div>
-    {MENU=2}
+    <div>
+     {MENU=3}
+    </div>
+    <div>
+     <p><a href=\"http://www.mozilla-europe.org/fr/products/firefox/\"><img src=\"".THEME."images/firefox.gif\" alt=\"Get Firefox Now !\"/></a></p>
+     <p><a href=\"http://www.nosoftwarepatents.com/fr/m/intro/index.html\"><img src=\"".THEME."images/nopatents.png\" alt=\"No Software Patent !\"/></a></p>
+     <p><img src=\"".THEME."images/music.gif\" alt=\"Music related website\"/></p>
+    </div>
+    <div>
+     {MENU=4}
+    </div>
    </div>
-
    <div id=\"content\">
     {MENU=1}";
 
 
-
 $FOOTER = "
-    {MENU=3}
-   </div>
-
-   <div id=\"footer\">
-    {MENU=4}
     {MENU=5}
-    <a href=\"http://www.mozilla-europe.org/fr/products/firefox/\"><img src=\"".THEME."images/firefox.gif\" alt=\"Get Firefox Now !\"/></a>
-    <img src=\"".THEME."images/music.gif\" alt=\"Music related website\"/>
+   </div>
+  </div>
+  <div id=\"footer\">
+   {MENU=6}
+   <div class=\"spacer\"></div>
+    <div class=\"row\">
+     <span class=\"left\">
+      {MENU=7}
+     </span>
+     <span class=\"right\">
+      {MENU=8}
+     </span>
+    </div>
+    <br/>
     <a href=\"http://validator.w3.org/check/referer\"><img src=\"".THEME."images/xhtml.png\" alt=\"xHTML 1.1 valid !\"/></a>
     <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
-    {SITEDISCLAIMER}
-   </div>
+   <div class=\"spacer\"></div>
+   {MENU=9}
   </div>";
 
 
 // [newsstyle]
 $NEWSSTYLE = "
-    <div id=\"news\" class=\"box-border\">
-     <div class=\"news-caption\">
-      <span class=\"left\">{NEWSTITLE}</span>
-      <span class=\"right\"> {ADMINOPTIONS} {EMAILICON} | {NEWSCOMMENTS}</span>
+    <div class=\"box-border\">
+     <div class=\"box-caption\">
+      <div class=\"left\">
+       {NEWSTITLE}
+      </div>
+      <div class=\"right\">
+       {ADMINOPTIONS} {EMAILICON}
+      </div>
      </div>
-     <br/><hr class=\"underline\"/>
-     <div class=\"box-body\">{NEWSBODY}{EXTENDED}</div>
-     <div id=\"news-details\">Par {NEWSAUTHOR}, le {NEWSDATE}</div>
+     <div class=\"box-body\">
+      {NEWSBODY}
+      {EXTENDED}
+      <div class=\"news-details\">
+       <div class=\"left\">
+        {NEWSCOMMENTS}
+       </div>
+       <div class=\"right\">
+        {NEWSAUTHOR}, {NEWSDATE}
+       </div>
+      </div>
+     </div>
     </div>";
-
 
 define("ICONMAIL", "icon-mail.png");
 define("ICONPRINT", "icon-print.png");
-define("COMMENTLINK", "<img src=\"".THEME."images/icon-comment.png\" alt=\"Voir/poster des commentaires\"/> ");
-define("COMMENTOFFSTRING", "Pas de commentaires");
+define("COMMENTOFFSTRING", "Commentaires désactivés pour cet élément");
+define("COMMENTLINK", "Commentaires : ");
 
 
 // [linkstyle]
-define(PRELINK, "");
 define(POSTLINK, "");
-define(LINKSTART, "");
-define(LINKEND, "<br/>");
+define(PRELINK, "");
+define(LINKSTART, "<li>");
+define(LINKEND, "</li>");
 
 function tablestyle($caption, $text){
   global $style;
