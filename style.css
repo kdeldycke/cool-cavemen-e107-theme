@@ -1,0 +1,225 @@
+/* common tags styles */
+
+body {
+ background: #5D9900;
+ color: #000;
+ margin: 0px;
+ font-size: 9px;
+}
+
+body, .button, .tbox, .helpbox {
+ font-family: Sans, Verdana, Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited {text-decoration: none;}
+a:active, a:hover {text-decoration: underline;}
+a:link {color: #00248F}
+a:visited {color: #B30000;}
+a:hover {color: #B3B300;}
+
+img {
+ border: 0px;
+}
+
+.smalltext {
+ font-size: 9px;
+}
+
+
+/* general layout stuff */
+
+#container {
+ width: 760px;
+ padding: 10px;
+ margin: 0px;
+ margin-left: auto;
+ margin-right: auto;
+ border: #000 1px solid;
+ background-color: #fff /*#9BFF00*/;
+}
+
+#header {
+ padding: 0px;
+ margin: 0px;
+ margin-bottom: 5px;
+}
+
+#content, #sidebar, #footer {
+ padding: 5px;
+}
+
+.left {
+ float: left;
+ text-align: left;
+}
+
+.right {
+ float: right;
+ text-align: right;
+}
+
+
+/* content styles */
+
+#content {
+ margin-right: 180px;
+ padding-bottom: 40px;
+ border-right: 1px dashed #ccc;
+ background-color: /*#CCFFBF/#D3E6CF*/ #F5FFE6;
+ font-size: 12px;
+}
+
+#content > a {
+ text-decoration: none;
+ white-space: nowrap;
+ padding-bottom: 2px;
+}
+
+#content > a:hover {
+ background: url(images/diagonal.gif) repeat-x 100% 100%;
+}
+
+
+/* news styles */
+
+#news-details {
+ text-align: right;
+ font-size: 9px;
+ /*font-style: italic;*/
+}
+
+#news-details, #news-details > a {
+ color: #ccc;
+}
+
+#news-details > a:hover {
+ color: #666;
+}
+
+.underline {
+ height: 1px;
+ border: 0px;
+ margin: 0px;
+ background-color: #000;
+}
+
+#news.box-border {
+ margin-bottom: 40px;
+}
+
+#news.box-border > .box-body {
+ padding: 10px;
+}
+
+
+/* sidebar styles */
+
+#sidebar {
+ float: right;
+ width: 170px;
+ margin: 0px;
+ background-color: #C3FF66 /*transparent*/;
+ font-size: 10px;
+}
+
+
+/* footer styles */
+
+#footer {
+ clear: both;
+ text-align: center;
+ background-color: #ccc;
+}
+
+#footer, #footer > a {
+ color: #666;
+}
+
+
+/* box styles */
+
+.box-border {
+ margin-bottom: 10px;
+}
+
+.box-caption, .news-caption {
+ padding-left: 5px;
+ margin-bottom: 5px;
+}
+
+#content > .box-border > .box-caption, .news-caption {
+ font-weight: bold;
+}
+
+#content > .box-border > .box-caption,
+#sidebar > .box-border > .box-caption {
+ border-bottom: #000 1px solid;
+}
+
+#footer > .box-border > .box-caption {
+ border-bottom: #666 1px dotted;
+}
+
+
+/* form element styles */
+
+.tbox, .button {
+ background-color: #eee;
+ border: 1px solid #666;
+ font-size: 10px;
+}
+
+.helpbox {
+ background-color: transparent;
+ border: 0px;
+ font-size: 9px;
+}
+
+.tbox, .button, .helpbox {
+ margin-bottom: 1px;
+}
+
+.tbox {
+ padding: 1px;
+}
+
+.button, select.tbox {
+ padding: 0px;
+}
+
+.button {
+ background-image: url(images/button.png);
+}
+
+
+/* forum styles */
+
+.forumheader {
+ text-align: center;
+ padding: 3px;
+ margin-top: 30px; /* why doesn't work ??? -> appliquer ça au tr dont le td a une classe forumheader */
+}
+
+.forumheader2, .forumheader3 {
+ padding: 2px;
+ text-align: left;
+}
+
+.forumheader, .forumheader3 {
+ vertical-align: top;
+}
+
+/*border: 1px #6096BF solid;*/
+
+.forumheader {
+ background-color: #E6FF80;
+}
+
+.forumheader3 {
+ background-color: #F2FFBF;
+}
+
+.forumheader2 {
+ background-color: #FAFFE6;
+ vertical-align: middle;
+}
