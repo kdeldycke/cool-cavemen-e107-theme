@@ -29,27 +29,73 @@ img {
 /* general layout stuff */
 
 #header {
- display: table;
  background: #000;
  width: 100%;
  border: 0;
  margin: 0;
  padding: 0;
- padding-bottom: 10px;
 }
 
 #logo {
- text-align: left;
+ vertical-align: top;
+}
+
+#ofon_logo {
+ position: absolute;
+ top: 10px;
+ right: 10px;
 }
 
 #main {
- padding: 0;
+
+
+border-left-color: #999;   /* left column colour */
+border-left-style: solid;
+
+border-right-color: #999;  /* right column colour */
+border-right-style: solid;
+  background-color: #fff; /* center column colour */
+width: auto;
+  /*/*/ border-left-width: 180px ;  /* left column width. NN4 hack to hide borders */
+ /*/*/ border-right-width: 180px; /* right column width. NN4 hack to hide borders */
+
+
+/* padding: 0;
+ padding-top: 20px;
  background-image : url(images/leopardfur.png);
  background-position: right;
  background-repeat: repeat-y;
  float: right;
- width: 100%
+ width: 100%*/
 }
+
+#inner{margin:0; width:100%;}
+
+/*#content-test{
+ float: left;
+ width: 100%;
+ position: relative;
+ margin: 0 -8px 0 -2px;
+}*/
+
+#left_sidebar{
+ width:180px;
+ float:left;
+ position:relative;
+ margin-left:-180px;
+ margin-right:1px;
+
+}
+#right_sidebar{
+
+ width:180px;
+ float:right;
+position:relative;
+  margin-right:-180px;
+ margin-left:1px;
+}
+
+
 
 .left, div[style="text-align:left"] {
  float: left;
@@ -67,14 +113,15 @@ div.clearall {
 /* tabs styles */
 
 #tabnav {
+ background-color: #666;
  padding: 0;
  margin: 0;
- background-color: #000;
- color: #000;
  float: left;
  width: 100%;
  border: 0;
  border-top: 2px solid #fff;
+ font-size: 11px;
+ font-weight: bold;
 }
 
 #tabnav li {
@@ -82,23 +129,20 @@ div.clearall {
 }
 
 #tabnav li a {
- background-color: #000;
- padding: 5px 10px;
- font-weight: bold;
- text-decoration: none;
- font-size: 11px;
- float: left;
- color: #666;
- border-color: #666;
- border-style: none dotted solid none;
+ color: #999;
+ border-color: #333;
+ border-style: none dotted none none;
  border-width: 0 1px 1px 0;
+ padding: 5px 10px;
+ text-decoration: none;
+ float: left;
 }
 
 #tabnav li a:hover {
- background-color: #333;
  color: #fff;
- border-color: #666;
- border-style: none dotted solid none;
+ border-color: #333;
+ background-color: #333;
+ border-style: none dotted none none;
  border-width: 0 1px 1px 0;
 }
 
@@ -107,32 +151,35 @@ div.clearall {
 
 #content {
  font-size: 12px;
- margin: 0 210px 0 auto; /* right margin = sidebar width + sidebar padding */
- padding-top: 30px;
- padding-right: 5%;
- padding-left: 5%;
- padding-bottom: 30px;
+ padding: 10px;
 }
 
 #content .box-border {
- margin-bottom: 50px;
-}
-
-#content .box-caption {
- font-weight: bold;
- /*background: #000 url(images/leopardfur.png) no-repeat scroll top;*/
- background: #ccc;
- border: 1px solid #999;
- padding: 3px 5px;
- margin: 0;
+ background: #fff;
+ border: 2px solid #ddd;
+ margin-bottom: 20px;
  -moz-border-radius: 14px;
 }
 
-#content .box-caption > h1 {
+#content .box-caption {
+ /*background: #000 url(images/leopardfur.png) no-repeat scroll top;*/
  color: #000;
- font-size: 12px;
- padding: 0;
+ /*background: #ddd;*/
+ border-bottom: 2px dotted #ddd;
+ padding: 3px 5px;
  margin: 0;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#content .box-caption > .details, #content .box-caption > .details > a {
+ font-size: 10px;
+ color: #999;
+ font-weight: normal;
+}
+
+#content .box-caption a:hover {
+ color: #333;
 }
 
 #content .box-body {
@@ -168,52 +215,33 @@ div.clearall {
 }*/
 
 
-/* news styles */
-
-.news-details {
- padding-top: 14px;
- font-size: 10px;
-}
-
-.news-details, .news-details a {
- color: #999;
-}
-
-.news-details a:hover {
- color: #333;
-}
-
-
 /* sidebar styles */
 
-#sidebar {
+.sidebar {
  font-size: 10px;
- float: right;
- width: 190px;
- padding: 20px 20px 0 0;
 }
 
-#sidebar #boxed {
+/*#sidebar #boxed {
  border: 1px solid #999;
  background-color: #eee;
  -moz-border-radius: 10px;
-}
+}*/
 
-#sidebar > div {
+.sidebar > div {
  padding: 6px 0;
 }
 
-#sidebar .box-border {
+.sidebar .box-border {
  margin-bottom: 10px;
 }
 
-#sidebar .box-caption {
- background: #999;
+.sidebar .box-caption {
+ background: #666;
  font-weight: bold;
  padding: 2px 6px;
 }
 
-#sidebar .box-body {
+.sidebar .box-body {
  padding: 6px;
 }
 

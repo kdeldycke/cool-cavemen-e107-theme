@@ -26,7 +26,8 @@ $logo = THEME."images/coolcavemen.png";
 
 $HEADER = "
   <div id=\"header\">
-   <div id=\"logo\"><img src=\"".$logo."\" alt=\"Cool Cavemen\"/></div>
+   <img id=\"logo\" src=\"".$logo."\" alt=\"Cool Cavemen\"/>
+   <a href=\"http://www.ofon.org\"><img id=\"ofon_logo\" src=\"".THEME."images/ofon_logo.png\" alt=\"OfOn music community\"/></a>
    <ul id=\"tabnav\">
     {SITELINKS=flat}
    </ul>
@@ -35,15 +36,10 @@ $HEADER = "
   <div class=\"clearall\"/>
 
   <div id=\"main\">
-   <div id=\"sidebar\">
-    <div id=\"boxed\">
+  <div id=\"inner\">
 
-     <div id=\"quote\">
-      <span class=\"start\">&laquo;</span>
-      <span class=\"stop\">&raquo;</span>
-      A tale of frustration, hardship, and endless reward.
-      <p class=\"author\">-- Eric Meyer</p>
-     </div>
+        <div id=\"left_sidebar\" class=\"sidebar\">
+    <div id=\"boxed\">
 
      {MENU=2}
     </div>
@@ -51,7 +47,7 @@ $HEADER = "
      {MENU=3}
     </div>
     <div>
-     <p><img src=\"".THEME."images/cool_cavemen_button.png\" alt=\"Link us to your site with this button !\"/></p>
+     <p><img src=\"".THEME."images/cool_cavemen_button.png\" alt=\"If you want to create a link from your website to us, you'd better use this button !\"/></p>
      <p><a href=\"http://www.mozilla-europe.org/fr/products/firefox/\"><img src=\"".THEME."images/firefox.gif\" alt=\"Get Firefox Now !\"/></a></p>
      <p><a href=\"http://www.nosoftwarepatents.com/fr/m/intro/index.html\"><img src=\"".THEME."images/nopatents.png\" alt=\"No Software Patent !\"/></a></p>
      <p><img src=\"".THEME."images/music.gif\" alt=\"Music related website\"/></p>
@@ -60,6 +56,22 @@ $HEADER = "
      {MENU=4}
     </div>
    </div>
+
+         <div id=\"right_sidebar\" class=\"sidebar\">
+
+
+     <div id=\"quote\">
+      <span class=\"start\">&laquo;</span>
+      <span class=\"stop\">&raquo;</span>
+      A tale of frustration, hardship, and endless reward.
+      <p class=\"author\">-- Eric Meyer</p>
+     </div>
+
+
+         </div>
+
+
+
    <div id=\"content\">
     {MENU=1}";
 
@@ -67,6 +79,9 @@ $HEADER = "
 $FOOTER = "
     {MENU=5}
    </div>
+
+
+  </div>
   </div>
 
   <div id=\"footer\">
@@ -84,9 +99,30 @@ $FOOTER = "
     <a href=\"".THEME."/../../../e107_files/backend/news.xml\"><img src=\"".THEME."images/rss2.gif\" alt=\"RSS 2.0 news feed\"/></a>
     <a href=\"http://validator.w3.org/check/referer\"><img src=\"".THEME."images/xhtml.png\" alt=\"xHTML 1.1 valid !\"/></a>
     <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
-    <br/><a href=\"http://fr.creativecommons.org\"><img src=\"".THEME."images/cc.gif\" alt=\"Audio material under Creative Commons licences\"/></a>
-    <br/>
-    Les créations audios disponibles dans la rubrique <a href=\"http://coolcavemen.com/download.php\">download</a> de ce site sont l'oeuvre des Cool Cavemen (G.Deroubaix, T.Haydock, M.Jankowski, T.Jankowski, V.Pouliquen). Ces compositions sont mises à disposition sous un <a href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>.
+    <!-- Contrat Creative Commons -->
+    <br/><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"><img src=\"".THEME."images/creative_commons_licensed.gif\" alt=\"Original material (text, audio, image, video) under Creative Commons by-nc-nd licence\"/></a><br/>
+    Les créations originales (textes, musiques, images et vidéos) présentes sur ce site  sont mises à disposition sous un <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>. La paternité des oeuvres dont l'auteur est désigné par \"Cool Cavemen\" revient à G.Deroubaix, T.Haydock, M.Jankowski, T.Jankowski et V.Pouliquen.
+    <!-- /Contrat Creative Commons -->
+    <!--
+     <rdf:RDF xmlns=\"http://web.resource.org/cc/\"
+     xmlns:dc=\"http://purl.org/dc/elements/1.1/\"
+     xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">
+     <Work rdf:about=\"\">
+      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Sound\"/>
+      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\"/>
+      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Text\"/>
+      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/MovingImage\"/>
+      <license rdf:resource=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"/>
+     </Work>
+     <License rdf:about=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">
+      <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\"/>
+      <permits rdf:resource=\"http://web.resource.org/cc/Distribution\"/>
+      <requires rdf:resource=\"http://web.resource.org/cc/Notice\"/>
+      <requires rdf:resource=\"http://web.resource.org/cc/Attribution\"/>
+      <prohibits rdf:resource=\"http://web.resource.org/cc/CommercialUse\"/>
+     </License>
+    </rdf:RDF>
+   -->
    <div class=\"clearall\"/>
    {MENU=9}
   </div>";
@@ -96,20 +132,11 @@ $FOOTER = "
 $NEWSSTYLE = "
     <div class=\"box-border\">
      <div class=\"box-caption\">
-      <span class=\"right\">{ADMINOPTIONS} {EMAILICON}</span>
-      <h1>{NEWSTITLE}</h1>
+      {NEWSTITLE}<br/>
+      <span class=\"details\">{NEWSDATE}, par {NEWSAUTHOR} | {NEWSCOMMENTS} | {ADMINOPTIONS} {EMAILICON}</span>
      </div>
      <div class=\"box-body\">
       {NEWSBODY}
-      {EXTENDED}
-      <div class=\"news-details\">
-       <div class=\"left\">
-        {NEWSCOMMENTS}
-       </div>
-       <div class=\"right\">
-        {NEWSDATE}, par {NEWSAUTHOR}
-       </div>
-      </div>
      </div>
     </div>";
 
