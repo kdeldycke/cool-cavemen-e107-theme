@@ -16,17 +16,17 @@
 $themename = "Cool Cavemen";
 $themeversion = "1.0";
 $themeauthor = "Kevin Deldycke";
-$themedate = "21/11/2004";
-$themeinfo = "This theme, originally designed for the Cool Cavemen band website (www.funky-storm.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@funky-storm.com)";
+$themedate = "22/12/2004";
+$themeinfo = "This theme, originally designed for the Cool Cavemen band website (www.coolcavemen.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@coolcavemen.com)";
 
 // [layout]
 $layout = "_default";
 
-$logo = THEME."images/laser.png";
+$logo = THEME."images/logo.png";
 
 $HEADER = "
   <div id=\"header\">
-   <div id=\"logo\"><img src=\"".$logo."\" alt=\"The Ultimate Band\"/></div>
+   <div id=\"logo\"><img src=\"".$logo."\" alt=\"Cool Cavemen\"/></div>
    <ul id=\"tabnav\">
     {SITELINKS=flat}
    </ul>
@@ -57,18 +57,20 @@ $FOOTER = "
     {MENU=5}
    </div>
   </div>
+
   <div id=\"footer\">
    {MENU=6}
    <div class=\"spacer\"></div>
     <div class=\"row\">
-     <span class=\"left\">
+     <div class=\"left\">
       {MENU=7}
-     </span>
-     <span class=\"right\">
+     </div>
+     <div class=\"right\">
       {MENU=8}
-     </span>
+     </div>
     </div>
     <br/>
+    <a href=\"".THEME."/../../../e107_files/backend/news.xml\"><img src=\"".THEME."images/rss2.gif\" alt=\"RSS 2.0 news feed\"/></a>
     <a href=\"http://validator.w3.org/check/referer\"><img src=\"".THEME."images/xhtml.png\" alt=\"xHTML 1.1 valid !\"/></a>
     <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
    <div class=\"spacer\"></div>
@@ -80,12 +82,8 @@ $FOOTER = "
 $NEWSSTYLE = "
     <div class=\"box-border\">
      <div class=\"box-caption\">
-      <div class=\"left\">
-       {NEWSTITLE}
-      </div>
-      <div class=\"right\">
-       {ADMINOPTIONS} {EMAILICON}
-      </div>
+      <span class=\"right\">{ADMINOPTIONS} {EMAILICON}</span>
+      <h1>{NEWSTITLE}</h1>
      </div>
      <div class=\"box-body\">
       {NEWSBODY}
@@ -95,7 +93,7 @@ $NEWSSTYLE = "
         {NEWSCOMMENTS}
        </div>
        <div class=\"right\">
-        {NEWSAUTHOR}, {NEWSDATE}
+        {NEWSDATE}, par {NEWSAUTHOR}
        </div>
       </div>
      </div>
@@ -104,7 +102,7 @@ $NEWSSTYLE = "
 define("ICONMAIL", "icon-mail.png");
 define("ICONPRINT", "icon-print.png");
 define("COMMENTOFFSTRING", "Commentaires désactivés pour cet élément");
-define("COMMENTLINK", "Commentaires : ");
+define("COMMENTLINK", " Commentaires : ");
 
 
 // [linkstyle]

@@ -21,7 +21,7 @@ img {
  border: 0;
 }
 
-.smalltext {
+.smalltext, div.indent {
  font-size: 9px;
 }
 
@@ -38,7 +38,7 @@ img {
 }
 
 #logo {
- text-align: center;
+ text-align: left;
 }
 
 #container {
@@ -53,14 +53,12 @@ img {
  padding: 5px;
 }
 
-.left {
+.left, div[style="text-align:left"] {
  float: left;
- text-align: left;
 }
 
-.right {
+.right, div[style="text-align:right"] {
  float: right;
- text-align: right;
 }
 
 div.spacer {
@@ -124,6 +122,23 @@ div.spacer {
  padding: 10px;
 }
 
+#content .box-body [style="text-align:left"] {
+ margin: 10px 10px 10px 0;
+}
+
+#content .box-body [style="text-align:right"] {
+ margin: 10px 0 10px 10px;
+}
+
+#content .box-body .indent {
+ /* blockote e107 tags */
+ background: #eee;
+ color: #000;
+ margin: 10px;
+ padding: 10px;
+ border: 1px solid #ccc;
+}
+
 /*#content a {
  text-decoration: none;
  white-space: nowrap;
@@ -138,21 +153,16 @@ div.spacer {
 /* news styles */
 
 .news-details {
- margin-top: 14px;
- text-align: right;
- display: block;
+ padding-top: 14px;
+ font-size: 10px;
 }
 
 .news-details, .news-details a {
- color: #ccc;
+ color: #999;
 }
 
 .news-details a:hover {
  color: #333;
-}
-
-.news-details .right, .news-details .right a {
- font-size: 9px;
 }
 
 
@@ -183,6 +193,14 @@ div.spacer {
  border-top: 1px solid #666;
 }
 
+#footer .left {
+ text-align: left;
+}
+
+#footer .right {
+ text-align: right;
+}
+
 #footer, #footer a {
  color: #666;
 }
@@ -201,9 +219,21 @@ div.spacer {
 
 #content .box-caption {
  font-weight: bold;
+ background: #000 url(images/leopardfur.png) no-repeat scroll top;
+ border: 1px solid #333;
+ padding: 3px 5px;
+ margin: 0;
+ color: #fff;
 }
 
-#content .box-caption, #sidebar .box-caption {
+#content .box-caption > h1 {
+ color: #fff;
+ font-size: 12px;
+ padding: 0;
+ margin: 0;
+}
+
+#sidebar .box-caption {
  border-bottom: #000 1px solid;
 }
 
