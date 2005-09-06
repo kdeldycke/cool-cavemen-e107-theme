@@ -14,9 +14,9 @@
 
 // [theme]
 $themename = "Cool Cavemen";
-$themeversion = "1.2";
+$themeversion = "1.3";
 $themeauthor = "Kevin Deldycke";
-$themedate = "06/03/2005";
+$themedate = "27/04/2005";
 $themeinfo = "This theme, originally designed for the Cool Cavemen band website (www.coolcavemen.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@coolcavemen.com)";
 
 // [layout]
@@ -25,154 +25,163 @@ $layout = "_default";
 $logo = THEME."images/cool-cavemen.png";
 
 $HEADER = "
-  <div id=\"header\">
-   <img id=\"cool_cavemen_logo\" src=\"".$logo."\" alt=\"Cool Cavemen\"/>
-   <a href=\"http://www.ofon.org\"><img id=\"ofon_logo\" src=\"".THEME."images/ofon-logo.png\" alt=\"OfOn music community\"/></a>
-   <ul id=\"tabnav\">
-    {SITELINKS=flat}
-   </ul>
-  </div>
 
-  <div class=\"clearall mozclear\"/>
+    <!-- For non-visual user agents: -->
+    <div id=\"top\"><a href=\"#main\" class=\"doNotDisplay doNotPrint\">Skip to main content.</a></div>
 
+    <!-- ##### Header ##### -->
 
-        <div id=\"pageWrapper\">
+    <div id=\"header\">
+      <div class=\"superHeader\">
+        <span>Copinage:</span>
+        <a href=\"http://www.ofon.org\" title=\"OfOn music community\">OfOn</a> |
+        <a href=\"http://www.skeil.com\" title=\"Skeil band\">Skeil</a> |
+        <a href=\"http://www.delacrem.com\" title=\"Delacrem band\">Delacrem</a> |
+        <a href=\"http://www.skarbone14.com\" title=\"Skarbone 14 band\">Skarbone 14</a> |
+        <a href=\"http://www.subsin.be\" title=\"SubSin band\">SubSin</a> |
+        <a href=\"http://mezofon01.skyblog.com\" title=\"Mez's Photo blog\">Mez</a>
+      </div>
 
-            <div id=\"outerColumnContainer\">
-                <div id=\"innerColumnContainer\">
-                    <div id=\"SOWrap\">
-                        <div id=\"middleColumn\">
-                            <div class=\"inside\">
+      <div class=\"midHeader\">
+        <a href=\"http://coolcavemen.com\"><img id=\"cool_cavemen_logo\" src=\"".$logo."\" alt=\"Cool Cavemen\"/></a>
+        <br class=\"doNotDisplay doNotPrint\"/>
+        <div class=\"headerLinks\">
+          {MENU=1}
+        </div>
+      </div>
 
-<!--- middle (main content) column begin -->
+      <br class=\"doNotDisplay doNotPrint\"/>
 
+      <span class=\"doNotDisplay\">Navigation:</span>
+      <ul id=\"tabNav\">
+        {SITELINKS=flat}
+      </ul>
+
+    </div>
+
+    <!-- ##### Main Content ##### -->
+
+    <div id=\"main\">
+      <div class=\"rowOfBoxes\">
+        <div class=\"twoThirds noBorderOnLeft\">
+          {MENU=2}
 ";
 
 
 $FOOTER = "
-<!--- middle (main content) column end -->
-
-                                <hr class=\"hide\" />
-                            </div>
-                        </div>
-                        <div id=\"leftColumn\">
-                            <div class=\"inside\">
-
-<!--- left column begin -->
-
-
-    {MENU=2}
-    <div>
-     <p><img src=\"".THEME."images/cool-cavemen-button.png\" alt=\"If you want to create a link from your website to us, you'd better use this tiny button !\"/></p>
-     <p><a href=\"http://www.mozilla-europe.org/fr/products/firefox/\"><img src=\"".THEME."images/firefox.gif\" alt=\"Get Firefox Now !\"/></a></p>
-     <p><a href=\"http://www.nosoftwarepatents.com/fr/m/intro/index.html\"><img src=\"".THEME."images/nopatents.png\" alt=\"No Software Patent !\"/></a></p>
-     <p><img src=\"".THEME."images/music.gif\" alt=\"Music related website\"/></p>
-    </div>
-    {MENU=3}
-
-
-
-
-<!--- left column end -->
-
-                                <hr class=\"hide\" />
-                            </div>
-                        </div>
-                        <div class=\"clearall mozclear\"></div>
-                    </div>
-                    <div id=\"rightColumn\">
-                        <div class=\"inside\">
-
-<!--- right column begin -->
-
-<p>
-    A shameless self plug:<br />
-    <a href=\"http://webhost.bridgew.edu/etribou/layouts/skidoo_too/gargoyles/index.html\">Skidoo Too : Gargoyles</a>
-    is a modified version of this layout. It has some nifty features that you might be interested
-    in investigating.
-</p>
-<p>
-    If you've ever thought about looking to make a donation to Ruthsarian Layouts,
-    you'll want to <a href=\"http://webhost.bridgew.edu/etribou/layouts/skidoo_too/gargoyles/index.html\">check out
-    Skidoo Too : Gargoyles</a>.
-</p>
-<p>
-    And if you've ever thought that anyone looking to donate money for a CSS-based layout
-    is just really crazy,
-    you'll want to <a href=\"http://webhost.bridgew.edu/etribou/layouts/skidoo_too/gargoyles/index.html\">check out
-    Skidoo Too : Gargoyles</a>.
-</p>
-
-<!--- right column end -->
-
-                            <hr class=\"hide\" />
-                        </div>
-                    </div>
-                    <div class=\"clearall mozclear\"></div>
-                </div>
-            </div>
-            <div id=\"footer\" class=\"inside\">
-
-<!-- footer begin -->
-
-
-    <div class=\"row\">
-     <div class=\"left\">
-      {MENU=7}
-     </div>
-     <div class=\"right\">
-      {MENU=8}
-     </div>
-    </div>
-
-    <br/>
-    <a href=\"".THEME."/../../../e107_files/backend/news.xml\"><img src=\"".THEME."images/rss2.gif\" alt=\"RSS 2.0 news feed\"/></a>
-    <a href=\"http://validator.w3.org/check/referer\"><img src=\"".THEME."images/xhtml.png\" alt=\"xHTML 1.1 valid !\"/></a>
-    <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
-    <!-- Contrat Creative Commons -->
-    <br/><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"><img src=\"".THEME."images/creative-commons-licensed.gif\" alt=\"Original material (text, audio, image, video) under Creative Commons by-nc-nd licence\"/></a><br/>
-    Les <a  href=\"".THEME."/../../../download.php\">créations originales</a> (textes, <a href=\"".THEME."/../../../download.php?list.6\">musiques</a>, <a href=\"".THEME."/../../../download.php?list.9\">images</a> et vidéos) présentes sur ce site sont mises à disposition sous un <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>. La paternité des oeuvres dont l'auteur est désigné par \"Cool Cavemen\" revient à <a href=\"".THEME."/../../../user.php?id.14\">G.Deroubaix</a>, <a href=\"".THEME."/../../../user.php?id.4\">T.Haydock</a>, <a href=\"".THEME."/../../../user.php?id.8\">M.Jankowski</a>, <a href=\"".THEME."/../../../user.php?id.5\">T.Jankowski</a> et <a href=\"".THEME."/../../../user.php?id.7\">V.Pouliquen</a>.
-    <!-- /Contrat Creative Commons -->
-    <!--
-     <rdf:RDF xmlns=\"http://web.resource.org/cc/\"
-     xmlns:dc=\"http://purl.org/dc/elements/1.1/\"
-     xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">
-     <Work rdf:about=\"\">
-      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Sound\"/>
-      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\"/>
-      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Text\"/>
-      <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/MovingImage\"/>
-      <license rdf:resource=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"/>
-     </Work>
-     <License rdf:about=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">
-      <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\"/>
-      <permits rdf:resource=\"http://web.resource.org/cc/Distribution\"/>
-      <requires rdf:resource=\"http://web.resource.org/cc/Notice\"/>
-      <requires rdf:resource=\"http://web.resource.org/cc/Attribution\"/>
-      <prohibits rdf:resource=\"http://web.resource.org/cc/CommercialUse\"/>
-     </License>
-    </rdf:RDF>
-   -->
-
-<!-- footer end -->
-
-            </div>
+          {MENU=4}
         </div>
 
+        <div class=\"oneThird\">
+          <div id=\"downloads\" class=\"boxBorder\">
+            <div class=\"rbtop\"><div></div></div>
+            <h1>All Cool Hits !</h1>
+            <div class=\"boxBody\">
+                <a href=\"".THEME."/../../../request.php?27\"><img src=\"images/tiny-audio-icon.png\" alt=\"Download Fusion in MP3\"/> [MP3]</a>
+                <a href=\"".THEME."/../../../request.php?28\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?29\">[FLAC]</a>
+              <b>NEW:</b> Fusion<br/><br/>
+              <span class=\"disabled\">
+              Prochaines sorties des titres du nouveau CD <i>All Cool Hits !</i>&nbsp;:<br/>
+                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
+              &mdash; <b>18 novembre 2005 &raquo;</b> Jérémiades<br/>
+                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
+              &mdash; <b>25 novembre 2005 &raquo;</b> Mystique<br/>
+                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
+              &mdash; <b>2 decembre 2005 &raquo;</b> Melalum<br/>
+                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
+              &mdash; <b>9 decembre 2005 &raquo;</b> New Pirates<br/>
+                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
+              &mdash; <b>16 decembre 2005 &raquo;</b> Culture &amp; Co.<br/>
+              </span>
+            </div>
+            <div class=\"rbbot\"><div></div></div>
+          </div>
 
+          {MENU=3}
+          <p class=\"filler\"><!-- Filler para to extend left vertical line --></p>
+        </div>
+      </div>
 
+      <div class=\"rowOfBoxes dividingBorderAbove\">
+        <div class=\"quarter noBorderOnLeft\">
+          {MENU=5}
+        </div>
 
+        <div class=\"quarter\">
+          {MENU=6}
+          <p class=\"filler\"><!-- Filler para to extend left vertical line --></p>
+        </div>
+
+        <div class=\"quarter\">
+          {MENU=7}
+        </div>
+
+        <div class=\"quarter\">
+          {MENU=8}
+        </div>
+      </div>
+    </div>
+
+    <!-- ##### Footer ##### -->
+
+    <div id=\"footer\">
+      {MENU=9}
+
+      <a href=\"".THEME."/../../../e107_files/backend/news.xml\"><img src=\"".THEME."images/rss2.gif\" alt=\"RSS 2.0 news feed\"/></a>
+      <a href=\"http://validator.w3.org/check/referer\"><img src=\"".THEME."images/xhtml.png\" alt=\"xHTML 1.1 valid !\"/></a>
+      <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
+      <!-- Contrat Creative Commons -->
+      <br/><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"><img src=\"".THEME."images/creative-commons-licensed.gif\" alt=\"Original material (text, audio, image, video) under Creative Commons by-nc-nd licence\"/></a><br/>
+      Les <a  href=\"".THEME."/../../../download.php\">créations originales</a> (textes, <a href=\"".THEME."/../../../download.php?list.6\">musiques</a>, <a href=\"".THEME."/../../../download.php?list.9\">images</a> et <a href=\"".THEME."/../../../download.php?list.12\">vidéos</a>) présentes sur ce site sont mises à disposition sous un <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>. La paternité des oeuvres dont l'auteur est désigné par \"Cool Cavemen\" revient à <a href=\"".THEME."/../../../user.php?id.14\">G.Deroubaix</a>, <a href=\"".THEME."/../../../user.php?id.4\">T.Haydock</a>, <a href=\"".THEME."/../../../user.php?id.8\">M.Jankowski</a>, <a href=\"".THEME."/../../../user.php?id.5\">T.Jankowski</a> et <a href=\"".THEME."/../../../user.php?id.7\">V.Pouliquen</a>.
+
+      <!-- ##### Creative Commons licence ##### -->
+      <!--
+      <rdf:RDF xmlns=\"http://web.resource.org/cc/\"
+               xmlns:dc=\"http://purl.org/dc/elements/1.1/\"
+               xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">
+        <Work rdf:about=\"\">
+          <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Sound\"/>
+          <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\"/>
+          <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Text\"/>
+          <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/MovingImage\"/>
+          <license rdf:resource=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"/>
+        </Work>
+        <License rdf:about=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">
+          <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\"/>
+          <permits rdf:resource=\"http://web.resource.org/cc/Distribution\"/>
+          <requires rdf:resource=\"http://web.resource.org/cc/Notice\"/>
+          <requires rdf:resource=\"http://web.resource.org/cc/Attribution\"/>
+          <prohibits rdf:resource=\"http://web.resource.org/cc/CommercialUse\"/>
+        </License>
+      </rdf:RDF>
+      -->
+
+      {MENU=10}
+    </div>
 ";
 
 
 // [newsstyle]
 $NEWSSTYLE = "
-    <div class=\"box-border\">
-     <h1>{NEWSTITLE}</h1>
-     <div class=\"box-body\">
-      <span class=\"details\">{NEWSDATE}, par {NEWSAUTHOR} | {NEWSCOMMENTS} | {ADMINOPTIONS} {EMAILICON}</span><br/>
-      {NEWSBODY}
-     </div>
+    <div class=\"boxBorder\">
+      <div class=\"rbtop\"><div></div></div>
+      <h1>{NEWSTITLE}</h1>
+      <div class=\"boxBody\">
+        {NEWSBODY}
+        <div class=\"newsDetails\">{NEWSDATE}, par {NEWSAUTHOR} | {NEWSCOMMENTS} | {ADMINOPTIONS} {EMAILICON}</div>
+      </div>
+      <div class=\"rbbot\"><div></div></div>
     </div>";
 
 define("ICONMAIL", "icon-mail.png");
@@ -189,13 +198,15 @@ define(LINKEND, "</li>");
 
 function tablestyle($caption, $text){
   global $style;
-  echo "<div class=\"box-border\">";
+  echo "<div class=\"boxBorder\">";
+  echo "<div class=\"rbtop\"><div></div></div>";
   if($caption != ""){
     echo "<h1>".$caption."</h1>";
   }
   if($text != ""){
-    echo "<div class=\"box-body\">".$text."</div>";
+    echo "<div class=\"boxBody\">".$text."</div>";
   }
+  echo "<div class=\"rbbot\"><div></div></div>";
   echo "</div>";
 }
 
