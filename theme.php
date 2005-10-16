@@ -22,7 +22,7 @@ $themeinfo = "This theme, originally designed for the Cool Cavemen band website 
 // [layout]
 $layout = "_default";
 
-$logo = THEME."images/cool-cavemen.png";
+$logo = THEME."images/cool-cavemen.jpg";
 
 $HEADER = "
 
