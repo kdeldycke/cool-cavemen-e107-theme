@@ -14,9 +14,9 @@
 
 // [theme]
 $themename = "Cool Cavemen";
-$themeversion = "1.3";
+$themeversion = "2.0";
 $themeauthor = "Kevin Deldycke";
-$themedate = "27/04/2005";
+$themedate = "16/10/2005";
 $themeinfo = "This theme, originally designed for the Cool Cavemen band website (www.coolcavemen.com) and released under the GNU General Public License (http://gnu.org), is the property of Kevin Deldycke (kevin@coolcavemen.com)";
 
 // [layout]
@@ -75,35 +75,33 @@ $FOOTER = "
         <div class=\"oneThird\">
           <div id=\"downloads\" class=\"boxBorder\">
             <div class=\"rbtop\"><div></div></div>
-            <h1>All Cool Hits !</h1>
+            <h1>Free music !</h1>
             <div class=\"boxBody\">
-                <a href=\"".THEME."/../../../request.php?27\"><img src=\"images/tiny-audio-icon.png\" alt=\"Download Fusion in MP3\"/> [MP3]</a>
-                <a href=\"".THEME."/../../../request.php?28\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?29\">[FLAC]</a>
-              <b>NEW:</b> Fusion<br/><br/>
-              <span class=\"disabled\">
-              Prochaines sorties des titres du nouveau CD <i>All Cool Hits !</i>&nbsp;:<br/>
-                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
-              &mdash; <b>18 novembre 2005 &raquo;</b> Jérémiades<br/>
-                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
-              &mdash; <b>25 novembre 2005 &raquo;</b> Mystique<br/>
-                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
-              &mdash; <b>2 decembre 2005 &raquo;</b> Melalum<br/>
-                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
-              &mdash; <b>9 decembre 2005 &raquo;</b> New Pirates<br/>
-                <!--a href=\"".THEME."/../../../request.php?27\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?27\">[FLAC]</a-->
-              &mdash; <b>16 decembre 2005 &raquo;</b> Culture &amp; Co.<br/>
-              </span>
+                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
+              Fusion<br/>
+                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
+              Mystique<br/>
+                <a href=\"".THEME."/../../../request.php?15\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?14\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?21\">[FLAC]</a>
+              Melalum<br/>
+                <a href=\"".THEME."/../../../request.php?13\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?2\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?22\">[FLAC]</a>
+              Culture &amp; Co.<br/>
+                <a href=\"".THEME."/../../../request.php?16\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php?17\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php?20\">[FLAC]</a>
+              Jérémiades<br/>
+                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
+                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
+                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
+              New Pirates<br/>
+              <a  href=\"".THEME."/../../../download.php\">&raquo; More downloads</a>
             </div>
             <div class=\"rbbot\"><div></div></div>
           </div>
@@ -143,7 +141,7 @@ $FOOTER = "
       <a href=\"http://jigsaw.w3.org/css-validator/check/referer\"><img src=\"".THEME."images/css.gif\" alt=\"CSS valid !\"/></a>
       <!-- Contrat Creative Commons -->
       <br/><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\"><img src=\"".THEME."images/creative-commons-licensed.gif\" alt=\"Original material (text, audio, image, video) under Creative Commons by-nc-nd licence\"/></a><br/>
-      Les <a  href=\"".THEME."/../../../download.php\">créations originales</a> (textes, <a href=\"".THEME."/../../../download.php?list.6\">musiques</a>, <a href=\"".THEME."/../../../download.php?list.9\">images</a> et <a href=\"".THEME."/../../../download.php?list.12\">vidéos</a>) présentes sur ce site sont mises à disposition sous un <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>. La paternité des oeuvres dont l'auteur est désigné par \"Cool Cavemen\" revient à <a href=\"".THEME."/../../../user.php?id.14\">G.Deroubaix</a>, <a href=\"".THEME."/../../../user.php?id.4\">T.Haydock</a>, <a href=\"".THEME."/../../../user.php?id.8\">M.Jankowski</a>, <a href=\"".THEME."/../../../user.php?id.5\">T.Jankowski</a> et <a href=\"".THEME."/../../../user.php?id.7\">V.Pouliquen</a>.
+      Sauf mention contraire, les <a  href=\"".THEME."/../../../download.php\">créations originales</a> (textes, <a href=\"".THEME."/../../../download.php?list.6\">musiques</a>, <a href=\"".THEME."/../../../download.php?list.9\">images</a>, <a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php\">photos</a> et <a href=\"".THEME."/../../../download.php?list.12\">vidéos</a>) présentes sur ce site sont mises à disposition sous un <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/fr/\">contrat Creative Commons by-nc-nd</a>. La paternité des oeuvres dont l'auteur est désigné par \"Cool Cavemen\" revient à <a href=\"".THEME."/../../../user.php?id.14\">G.Deroubaix</a>, <a href=\"".THEME."/../../../user.php?id.4\">T.Haydock</a>, <a href=\"".THEME."/../../../user.php?id.8\">M.Jankowski</a>, <a href=\"".THEME."/../../../user.php?id.5\">T.Jankowski</a> et <a href=\"".THEME."/../../../user.php?id.7\">V.Pouliquen</a>.
 
       <!-- ##### Creative Commons licence ##### -->
       <!--

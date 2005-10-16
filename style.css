@@ -51,11 +51,6 @@ img {
  font-family: "Courier New", Courier, monospace;
 }
 
-.disabled {
- color: #999;
-}
-
-
 
 /* ##### Header ##### */
 
@@ -88,7 +83,7 @@ img {
 
 .midHeader {
  color: white;
- background-color: rgb(102,102,102);
+ background: rgb(105,128,215) url(images/header-background.png) repeat-x scroll top;
  margin: 0;
  font-size: 90%;
 }
@@ -227,7 +222,6 @@ img {
  margin: 10px;
  padding: 10px;
  border: 1px solid #ccc;
- text-align: justify;
 }
 
 
@@ -443,7 +437,7 @@ img {
 #downloads.boxBorder {
  border:1px solid #999;
  position: relative;
- background: #eee url(images/gramophone.png) no-repeat 95% 15%;
+ background: #eee url(images/speaker.png) no-repeat 100% 15%;
 }
 
 #downloads.boxBorder .body{
