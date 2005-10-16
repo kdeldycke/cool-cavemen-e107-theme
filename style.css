@@ -49,6 +49,10 @@ img {
  font-family: "Courier New", Courier, monospace;
 }
 
+.disabled {
+ color: #999;
+}
+
 
 /* global layout */
 /* based on http://www.oswd.org/design/1773/prosimii */
@@ -179,13 +183,21 @@ img {
 
 .midHeader {
  color: white;
- background: rgb(105,128,215) url(images/header-background.jpg) repeat-x scroll top;
+ background: #4a5dbc url(images/logo-background.jpg) repeat-x scroll top;
  margin: 0;
  font-size: 90%;
 }
 
 .midHeader #cool_cavemen_logo {
- vertical-align: top;
+ text-align: center;
+ display: block;
+ height: 90px;
+}
+
+.midHeader #cool_cavemen_logo a {
+ text-align: center;
+ position: relative;
+ top: 4em;
 }
 
 .midHeader h1 {
@@ -217,6 +229,50 @@ img {
  color: rgb(195,196,210);
  text-decoration: underline;
 }
+
+
+/* band faces styles */
+
+#bandFaces {
+ background: #d19e05 url(images/faces-background.jpg) repeat scroll top;
+ float: left;
+ position: relative;
+ margin: 0;
+ padding: 0;
+ font-weight: bold;
+ font-size: 100%;
+ width: 100%;
+}
+
+#bandFaces li {
+ float: left;
+ margin: 0;
+ padding: 0;
+}
+
+#bandFaces li a {
+ text-decoration: none;
+}
+
+#bandFaces li, #bandFaces li a {
+ display: block;
+ width: 130px;
+ height: 90px;
+ background-repeat: no-repeat;
+ background-position: center bottom;
+}
+
+#bandFaces li#guiguit a {background-image: url(images/guiguit.png)}
+#bandFaces li#tom     a {background-image: url(images/tom.png)}
+#bandFaces li#max     a {background-image: url(images/max.png)}
+#bandFaces li#tomsax  a {background-image: url(images/tomsax.png)}
+#bandFaces li#vince   a {background-image: url(images/vince.png)}
+
+#bandFaces li#guiguit a:hover {background-image: url(images/guiguit-on.png)}
+#bandFaces li#tom     a:hover {background-image: url(images/tom-on.png)}
+#bandFaces li#max     a:hover {background-image: url(images/max-on.png)}
+#bandFaces li#tomsax  a:hover {background-image: url(images/tomsax-on.png)}
+#bandFaces li#vince   a:hover {background-image: url(images/vince-on.png)}
 
 
 /* tabs styles */
@@ -314,11 +370,13 @@ img {
 
 #main .indent {
  /* blockote e107 tags */
- background: #eee;
  color: #000;
  margin: 10px;
  padding: 10px;
- border: 1px solid #ccc;
+ border: 1px #ddd dotted;
+ border-left: 3px #ddd solid;
+ background: #f9f9f9 url(images/quote-open.png) no-repeat 5px 5px;
+ text-align: justify;
 }
 
 
@@ -423,13 +481,17 @@ a.forumlink {
  font-style: normal;
 }
 
+#downloads .audioDownload {
+ vertical-align: top;
+}
+
 
 /* box corners */
 
 #downloads.boxBorder .rbtop div, .boxBorder .rbtop, .boxBorder .rbbot div, .boxBorder .rbbot {
-  position: relative;
-  width: 100%;
-  height: 10px;
+ position: relative;
+ width: 100%;
+ height: 10px;
 }
 
 #downloads.boxBorder .rbtop div {
@@ -454,6 +516,9 @@ a.forumlink {
  right: -1px;
 }
 
+#webButtons {
+ text-align: center;
+}
 
 
 /* ##### Footer ##### */

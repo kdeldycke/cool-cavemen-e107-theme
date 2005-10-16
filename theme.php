@@ -22,12 +22,12 @@ $themeinfo = "This theme, originally designed for the Cool Cavemen band website 
 // [layout]
 $layout = "_default";
 
-$logo = THEME."images/cool-cavemen.jpg";
+$logo = THEME."images/cool-cavemen.png";
 
 $HEADER = "
 
     <!-- For non-visual user agents: -->
-    <div id=\"top\"><a href=\"#main\" class=\"doNotDisplay doNotPrint\">Skip to main content.</a></div>
+    <div id=\"top\"><a href=\"#main\" class=\"doNotDisplay\">Skip to main content.</a></div>
 
     <!-- ##### Header ##### -->
 
@@ -39,18 +39,32 @@ $HEADER = "
         <a href=\"http://www.delacrem.com\" title=\"Delacrem band\">Delacrem</a> |
         <a href=\"http://www.skarbone14.com\" title=\"Skarbone 14 band\">Skarbone 14</a> |
         <a href=\"http://www.subsin.be\" title=\"SubSin band\">SubSin</a> |
-        <a href=\"http://mezofon01.skyblog.com\" title=\"Mez's Photo blog\">Mez</a>
+        <a href=\"http://funkysaxplayer.skyblog.net\" title=\"TomSax's Blog, the blog of our saxophonist in Murcia, Spain\">TomSax</a> |
+        <a href=\"http://mezofon01.skyblog.com\" title=\"Mez's Photo Blog\">Mez</a>
       </div>
 
       <div class=\"midHeader\">
-        <a href=\"http://coolcavemen.com\"><img id=\"cool_cavemen_logo\" src=\"".$logo."\" alt=\"Cool Cavemen\"/></a>
-        <br class=\"doNotDisplay doNotPrint\"/>
+        <span id=\"cool_cavemen_logo\">
+          <a href=\"http://coolcavemen.com\"><img src=\"".$logo."\" alt=\"Cool Cavemen\"/></a>
+        </span>
+
+        <br class=\"doNotDisplay\"/>
+
+        <span class=\"doNotDisplay\">Band musicians:</span>
+        <ul id=\"bandFaces\">
+          <li id=\"guiguit\"><a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php?show=Membres%20du%20groupe%2F03.Guiguit%20%28bassiste%20Slapetant%29\"><span class=\"doNotDisplay\">Guiguit</span></a></li>
+          <li id=\"tom\"><a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php?show=Membres%20du%20groupe%2F05.J.%20Wong%20%28batteur%20Post-avant-gardiste%29\"><span class=\"doNotDisplay\">Tom</span></a></li>
+          <li id=\"max\"><a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php?show=Membres%20du%20groupe%2F02.Max%20%28guitariste%20Akrobatique%29\"><span class=\"doNotDisplay\">Max</span></a></li>
+          <li id=\"tomsax\"><a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php?show=Membres%20du%20groupe%2F04.Thomas%20%28saxophoniste%20Percutant%29\"><span class=\"doNotDisplay\">TomSax</span></a></li>
+          <li id=\"vince\"><a href=\"".THEME."/../../../e107_plugins/autogallery/autogallery.php?show=Membres%20du%20groupe%2F1.Vince%20%28chanteur%20Paradoxal%29\"><span class=\"doNotDisplay\">Vince</span></a></li>
+        </ul>
+
         <div class=\"headerLinks\">
           {MENU=1}
         </div>
       </div>
 
-      <br class=\"doNotDisplay doNotPrint\"/>
+      <br class=\"doNotDisplay\"/>
 
       <span class=\"doNotDisplay\">Navigation:</span>
       <ul id=\"tabNav\">
@@ -75,38 +89,66 @@ $FOOTER = "
         <div class=\"oneThird\">
           <div id=\"downloads\" class=\"boxBorder\">
             <div class=\"rbtop\"><div></div></div>
-            <h1>Free music !</h1>
+            <h1>All Cool Hits !</h1>
             <div class=\"boxBody\">
-                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
-              Fusion<br/>
-                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
-              Mystique<br/>
-                <a href=\"".THEME."/../../../request.php?15\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?14\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?21\">[FLAC]</a>
-              Melalum<br/>
-                <a href=\"".THEME."/../../../request.php?13\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?2\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?22\">[FLAC]</a>
-              Culture &amp; Co.<br/>
-                <a href=\"".THEME."/../../../request.php?16\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php?17\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php?20\">[FLAC]</a>
-              Jérémiades<br/>
-                <a href=\"".THEME."/../../../request.php\">[MP3]</a>
-                <a href=\"".THEME."/../../../request.php\">[OGG]</a>
-                <a href=\"".THEME."/../../../request.php\">[FLAC]</a>
-              New Pirates<br/>
-              <a  href=\"".THEME."/../../../download.php\">&raquo; More downloads</a>
+
+                <a href=\"".THEME."/../../../request.php?27\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Fusion in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?28\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Fusion in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?29\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Fusion in Flac\"/>Flac</a>
+              &mdash; <b>NEW!</b> Fusion<br/><br/>
+
+              <span class=\"disabled\">
+
+              Prochaines sorties des titres du nouveau CD <i>All Cool Hits !</i>&nbsp;:<br/>
+
+                <!--
+                <a href=\"".THEME."/../../../request.php?16\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Jérémiades in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?17\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Jérémiades in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?20\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Jérémiades in Flac\"/>Flac</a>
+                -->
+              &mdash; <b>18 novembre 2005 &raquo;</b> Jérémiades<br/>
+
+                <!--
+                <a href=\"".THEME."/../../../request.php?30\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Mystique in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?31\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Mystique in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?32\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Mystique in Flac\"/>Flac</a>
+                -->
+              &mdash; <b>25 novembre 2005 &raquo;</b> Mystique<br/>
+
+                <!--
+                <a href=\"".THEME."/../../../request.php?15\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Melalum in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?14\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Melalum in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?21\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Melalum in Flac\"/>Flac</a>
+                -->
+              &mdash; <b>2 decembre 2005 &raquo;</b> Melalum<br/>
+
+                <!--
+                <a href=\"".THEME."/../../../request.php?33\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download New Pirates in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?34\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download New Pirates in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?35\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download New Pirates in Flac\"/>Flac</a>
+                -->
+              &mdash; <b>9 decembre 2005 &raquo;</b> New Pirates<br/>
+
+                <!--
+                <a href=\"".THEME."/../../../request.php?13\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Culture and Co. in Mp3\"/>Mp3</a>
+                <a href=\"".THEME."/../../../request.php?2\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Culture and Co. in Ogg/Vorbis\"/>Ogg</a>
+                <a href=\"".THEME."/../../../request.php?22\"><img src=\"".THEME."images/tiny-audio-icon.png\" alt=\"Download Culture and Co. in Flac\"/>Flac</a>
+                -->
+              &mdash; <b>16 decembre 2005 &raquo;</b> Culture &amp; Co.<br/>
+
+              </span>
             </div>
             <div class=\"rbbot\"><div></div></div>
           </div>
 
           {MENU=3}
+
+          <div id=\"webButtons\">
+            <p><img src=\"".THEME."images/cool-cavemen-button.png\" alt=\"Link us to your site with this button !\"/></p>
+            <p><a href=\"http://www.nosoftwarepatents.com/fr/m/ev50/index.html\"><img src=\"".THEME."images/no-software-patents.png\" alt=\"No Software Patent !\"/></a></p>
+            <p><a href=\"http://www.mozilla-europe.org/fr/products/firefox/\"><img src=\"".THEME."images/firefox.png\" alt=\"Get Firefox Now !\"/></a></p>
+          </div>
+
           <p class=\"filler\"><!-- Filler para to extend left vertical line --></p>
         </div>
       </div>
