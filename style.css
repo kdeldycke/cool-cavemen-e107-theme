@@ -24,6 +24,10 @@ img {
  border: 0;
 }
 
+ul {
+ list-style-position: inside;
+}
+
 .doNotDisplay {
  display: none !important;
 }
@@ -35,6 +39,11 @@ img {
 
 .smalltext, div.indent {
  font-size: 100%;
+}
+
+.smalltext {
+ line-height: 1em;
+ text-align: left;
 }
 
 .left, div[style="text-align:left"] {
@@ -50,7 +59,7 @@ img {
 }
 
 .disabled {
- color: #999;
+ color: #666;
 }
 
 
@@ -155,11 +164,11 @@ img {
 /* ##### Header ##### */
 
 .superHeader {
+ background-color: rgb(33,50,66); /*url(images/cool-cavemen-logo.png) no-repeat 1em;*/
  color: rgb(130,128,154);
- background-color: rgb(33,50,66);
  text-align: right;
  margin: 0;
- padding: 0.5ex 10px;
+ padding: .5ex 10px;
  border-bottom: 1px solid #000;
 }
 
@@ -173,7 +182,7 @@ img {
  color: rgb(195,196,210);
  text-decoration: none;
  margin: 0;
- padding: 0 0.25ex 0 0;
+ padding: 0 .25ex 0 0;
 }
 
 .superHeader a:hover {
@@ -182,22 +191,14 @@ img {
 }
 
 .midHeader {
- color: white;
- background: #4a5dbc url(images/logo-background.jpg) repeat-x scroll top;
+ color: black;
+ background: #f5eae2;
  margin: 0;
  font-size: 90%;
 }
 
 .midHeader #cool_cavemen_logo {
- text-align: center;
- display: block;
- height: 90px;
-}
-
-.midHeader #cool_cavemen_logo a {
- text-align: center;
- position: relative;
- top: 4em;
+ vertical-align: top;
 }
 
 .midHeader h1 {
@@ -211,68 +212,26 @@ img {
 .headerLinks {
  text-align: right;
  margin: 0;
- padding: 0 0 2ex 0;
+ padding: 0;
  position: absolute;
  right: 1.5em;
  top: 3.5em;
+ line-height: 1.2em;
 }
 
 .headerLinks a {
- color: white;
+ color: black;
  text-decoration: none;
- margin: 0;
- padding: 0 0 0.5ex 0;
  display: block;
 }
 
 .headerLinks a:hover {
- color: rgb(195,196,210);
  text-decoration: underline;
 }
 
-
-/* band faces styles */
-
-#bandFaces {
- background: #d19e05 url(images/faces-background.jpg) repeat scroll top;
- float: left;
- position: relative;
- margin: 0;
- padding: 0;
- font-weight: bold;
- font-size: 100%;
- width: 100%;
+.headerLinks a.forumlink {
+ color: black;
 }
-
-#bandFaces li {
- float: left;
- margin: 0;
- padding: 0;
-}
-
-#bandFaces li a {
- text-decoration: none;
-}
-
-#bandFaces li, #bandFaces li a {
- display: block;
- width: 130px;
- height: 90px;
- background-repeat: no-repeat;
- background-position: center bottom;
-}
-
-#bandFaces li#guiguit a {background-image: url(images/guiguit.png)}
-#bandFaces li#tom     a {background-image: url(images/tom.png)}
-#bandFaces li#max     a {background-image: url(images/max.png)}
-#bandFaces li#tomsax  a {background-image: url(images/tomsax.png)}
-#bandFaces li#vince   a {background-image: url(images/vince.png)}
-
-#bandFaces li#guiguit a:hover {background-image: url(images/guiguit-on.png)}
-#bandFaces li#tom     a:hover {background-image: url(images/tom-on.png)}
-#bandFaces li#max     a:hover {background-image: url(images/max-on.png)}
-#bandFaces li#tomsax  a:hover {background-image: url(images/tomsax-on.png)}
-#bandFaces li#vince   a:hover {background-image: url(images/vince-on.png)}
 
 
 /* tabs styles */
@@ -336,7 +295,7 @@ img {
 }
 
 .boxBody {
- margin: 0 0 0 0.5em;
+ margin: 0 0 0 .5em;
  padding: 0;
 }
 
@@ -352,7 +311,7 @@ img {
  color: rgb(61,92,122);
  text-decoration: none;
  margin: 0;
- padding: 0.25ex 0.75ex;
+ padding: .25ex .75ex;
 }
 
 .newsDetails a:hover {
@@ -399,7 +358,7 @@ img {
 #quote > span {
  color: #ddd;
  position: absolute;
- line-height: 0.6em;
+ line-height: .6em;
 }
 
 #quote .start {
@@ -418,7 +377,8 @@ img {
 /* forum styles */
 
 .fborder, .fbdefault {
-  margin-bottom: 10px;
+ margin-bottom: 10px;
+ text-align: left;
 }
 
 .forumheader, .forumheader2, .f2default, .forumheader3, .f3default, .finfobar {
@@ -461,29 +421,57 @@ a.forumlink {
 /* download box style */
 
 #downloads.boxBorder {
- border: 1px solid #999;
+ border: 1px solid #333;
  position: relative;
  background: #eee url(images/box-shader.png) repeat-x scroll top;
 }
 
 #downloads.boxBorder .boxBody {
- padding: 0.5em;
+ margin: 0;
  background: url(images/speaker.png) no-repeat 100% 15%;
 }
 
-#downloads.boxBorder h1 {
- color: rgb(0,0,0);
- padding: 0 1.2em 10px 1.2em;
- margin: 0;
- display: block;
- font-weight: bold;
- font-size: 120%;
- font-style: normal;
+#downloads fieldset {
+ padding: .5em;
+ border-width: 1px 0 0;
+ border-style: dotted;
+ border-color: #333;
 }
 
-#downloads .audioDownload {
- vertical-align: top;
+#downloads legend {
+  padding: .2em .5em;
+  font-weight: bold;
+  color: #333;
 }
+
+.playButton {
+ display: block;
+ font-weight: bold;
+ font-size: 160%;
+}
+
+a.playButton {
+ cursor: pointer; /* need for IE6 */
+ border-width: 1px;
+ border-style: solid;
+ border-color: transparent;
+ padding: 4px;
+ background-color: #9ce86e;
+ border-color: #65ab41;
+ margin: 0 10px 10px;
+ padding: .5em;
+}
+
+a.playButton img {
+ vertical-align: middle;
+}
+
+a.playButton:hover {
+ color: #fff;
+ background-color: #3abf00;
+ border-color: #333;
+}
+
 
 
 /* box corners */
@@ -495,23 +483,23 @@ a.forumlink {
 }
 
 #downloads.boxBorder .rbtop div {
- background: url(images/10px_gray_white_tl.png) no-repeat top left;
+ background: url(images/10px_light_black_white_tl.png) no-repeat top left;
  left: -2px;
 }
 
 #downloads.boxBorder .rbtop {
- background: url(images/10px_gray_white_tr.png) no-repeat top right;
+ background: url(images/10px_light_black_white_tr.png) no-repeat top right;
  right: -1px;
  top: -1px;
 }
 
 #downloads.boxBorder .rbbot div {
- background: url(images/10px_gray_white_bl.png) no-repeat bottom left;
+ background: url(images/10px_light_black_white_bl.png) no-repeat bottom left;
  left: -2px;
 }
 
 #downloads.boxBorder .rbbot {
- background: url(images/10px_gray_white_br.png) no-repeat bottom right;
+ background: url(images/10px_light_black_white_br.png) no-repeat bottom right;
  bottom: -1px;
  right: -1px;
 }
